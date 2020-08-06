@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="baM-EB-8xf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="gqe-vl-fZ0">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="baM-EB-8xf" customClass="LoginViewController" customModule="Intern2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pO7-vC-Lig">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xc-Oq-5na">
+                                <rect key="frame" x="220" y="270" width="160" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5zO-8t-q8i"/>
+                                    <constraint firstAttribute="width" constant="160" id="Uyf-xs-7xY"/>
+                                </constraints>
+                                <state key="normal" title="ログイン"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="baM-EB-8xf" eventType="touchUpInside" id="HlC-uk-Z3O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5Xc-Oq-5na" firstAttribute="centerX" secondItem="pO7-vC-Lig" secondAttribute="centerX" id="JlQ-U7-Vbk"/>
+                            <constraint firstItem="5Xc-Oq-5na" firstAttribute="centerY" secondItem="pO7-vC-Lig" secondAttribute="centerY" id="fAR-u9-e1Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nvO-nK-eSQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNP-uw-Fe0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20.289855072463769" y="-22.098214285714285"/>
+        </scene>
+    </scenes>
+</document>

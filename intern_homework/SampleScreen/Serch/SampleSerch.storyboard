@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQl-AW-HIb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--サンプル-->
+        <scene sceneID="KoY-Cn-ZPA">
+            <objects>
+                <navigationController title="サンプル" id="BQl-AW-HIb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fFQ-Nh-lUK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="KPi-1w-VBk" kind="relationship" relationship="rootViewController" id="Yzv-wa-7ST"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IJh-Gv-Cgo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1561" y="0.0"/>
+        </scene>
+        <!--記事検索-->
+        <scene sceneID="7AS-AQ-LNR">
+            <objects>
+                <viewController id="KPi-1w-VBk" customClass="SampleSerchViewContorller" customModule="Intern2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k4D-mg-pMR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="キーワードを入力して検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AVK-cq-1ob">
+                                <rect key="frame" x="107.5" y="347" width="199.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sd-kK-wLQ">
+                                <rect key="frame" x="80" y="421" width="254" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="0il-Vo-Wvz"/>
+                                    <constraint firstAttribute="width" constant="254" id="c48-BP-tJK"/>
+                                </constraints>
+                                <state key="normal" title="検索"/>
+                                <connections>
+                                    <action selector="serchButtonTapped:" destination="K1I-Y9-fit" eventType="touchUpInside" id="6jG-Y8-hfx"/>
+                                    <action selector="serchButtonTapped:" destination="KPi-1w-VBk" eventType="touchUpInside" id="uW3-K3-NTk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Sd-kK-wLQ" firstAttribute="centerY" secondItem="k4D-mg-pMR" secondAttribute="centerY" id="3na-Uj-gMc"/>
+                            <constraint firstItem="AVK-cq-1ob" firstAttribute="centerX" secondItem="k4D-mg-pMR" secondAttribute="centerX" id="In5-Z1-gFz"/>
+                            <constraint firstItem="3Sd-kK-wLQ" firstAttribute="centerX" secondItem="k4D-mg-pMR" secondAttribute="centerX" id="rQj-HD-Wop"/>
+                            <constraint firstItem="3Sd-kK-wLQ" firstAttribute="top" secondItem="AVK-cq-1ob" secondAttribute="bottom" constant="40" id="xtH-HL-WJq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EJ0-F9-UFO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="記事検索" id="cAq-1i-AHl"/>
+                    <connections>
+                        <outlet property="serchButton" destination="3Sd-kK-wLQ" id="WcM-al-37P"/>
+                        <outlet property="textField" destination="AVK-cq-1ob" id="jI6-lr-eLP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sw5-Xc-n6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="K1I-Y9-fit" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-649.27536231884062" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
